@@ -8,7 +8,7 @@ module of-config-1.2-sptn-port-ext {
   contact "SPTN OpenFlow Extensions";
   description "SPTN Port Extensions Yang Module";
 
-  revision "2019-06-11" {
+  revision "2019-12-27" {
     description "initial";
     reference "sptn openflow extensions draft";
   }
@@ -132,6 +132,39 @@ module of-config-1.2-sptn-port-ext {
       }  
     } 
   }
+  
+  grouping tdm-e1-status-grouping {
+    container tdm-e1-status {
+      description
+        "The tdm performance status.";
+      leaf es {
+        type uint64;
+        config false;
+        description
+          "The error seconds.";
+      }
+      leaf ses {
+        type uint64;
+        config false;
+        description
+          "The severely error seconds.";
+      }
+
+      leaf uas {
+        type uint64;
+        config false;
+        description
+          "The unavailable seconds."; 
+      }
+
+      leaf cv {
+        type uint64;
+        config false;
+        description
+          "The Code Violation."; 
+      }
+    }
+  }
 
   grouping tdm-grouping {
     container tdm {
@@ -180,7 +213,7 @@ module of-config-1.2-sptn-port-ext {
         description
           "";
       }
-      
+      uses tdm-status-grouping;
     }
   }
 

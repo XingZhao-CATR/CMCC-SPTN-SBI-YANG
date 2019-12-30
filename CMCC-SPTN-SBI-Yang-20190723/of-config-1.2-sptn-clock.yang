@@ -251,7 +251,8 @@ module of-config-1.2-sptn-clock {
       }
       leaf-list system-clock-source-priority-list {
         type string;
-      
+             ordered-by user;
+   
         description
           "The list of port priority.";
       }
