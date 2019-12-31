@@ -213,7 +213,7 @@ module of-config-1.2-sptn-port-ext {
         description
           "";
       }
-      uses tdm-status-grouping;
+      uses tdm-e1-status-grouping;
     }
   }
 
