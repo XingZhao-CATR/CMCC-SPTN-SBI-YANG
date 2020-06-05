@@ -823,8 +823,8 @@
     {
       "id": "ACTSET_OUTPUT",
       "type": "field",
-      "exp_id": "0x04EA",
-      "exp_code": 41,
+      "exp_id": "0x4f4e4600",
+      "exp_code": 43,
       "doc": [
         "Pipeline Field that identifies the output port in an egress table, defined in EXT-233."
       ]
